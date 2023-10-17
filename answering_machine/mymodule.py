@@ -1,7 +1,5 @@
 
-#Можно узнать оплату, контакты тренера, расписание, рецепт супа и запросить анекдот
 
-import  random
 import time
 def menu():
     text = input("Введите запрос: ").lower()
@@ -9,18 +7,19 @@ def menu():
     summ = 'оплат'
     cont = 'трен'
     pl = 'расп'
-    rez="суп"
-    jok="анек"
+    adr= 'адрес'
+    prot='прот'
+
     if summ in text:
         summa()
     if cont in text:
         contact()
     if pl in text:
         plan()
-    if rez in text:
-        rezept()
-    if jok in text:
-        joke()
+    if adr in text:
+        adres()
+    if prot in text:
+        protein()
     else:
         menu()
 
@@ -44,21 +43,12 @@ def plan():
     time.sleep(2)
     menu()
 
-
-def rezept ():
-    print("Мясо-500г \nСвекла-300г\nТоматное пюре-2 столовые ложки")
+def adres():
+    print("Олимпийский просп. 1")
     time.sleep(2)
     menu()
 
-def joke ():
-    a=["Учитель алгебры очень расстроился, когда нашел свою жену с двумя неизвестными.",
-      " - Я по поводу объявления о продажи мёда, скажите он настоящий?\n"
-       " - Липовый.",
-       "-Внучок, как зовут того англичанина, с которым я дружу?\n"
-        "-Паркинсон"
-
-       ]
-    randomm=random.choice(a)
-    print(randomm)
+def protein():
+    print("2-3г протеина на 1 кг веса")
     time.sleep(2)
     menu()
