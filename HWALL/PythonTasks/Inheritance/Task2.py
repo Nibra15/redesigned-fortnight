@@ -4,3 +4,21 @@
 Во втором классе вызовите метод класса родителя и добавьте к выводу надпись "но его отчислят если он не будет учить ООП".
 Создайте экземпляр второго класса с вашим именем и вызовите метод печатающий всю надпись.
 """
+class Student:
+
+    def __init__(self,name):
+        self.name=name
+
+    def genius(self):
+        print(self.name, "гений")
+
+St = Student("Oleg")
+St.genius()
+
+class Student2(Student):
+    def kick(self):
+        super().genius()
+        print("но его отчислят если он не будет учить ООП")
+
+x=Student2("Oleg")
+x.kick()
